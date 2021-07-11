@@ -1,10 +1,20 @@
 name: learn-github-actions
+
+##Event
 on: [push]
+
+##Jobs
 jobs:
   check-bats-version:
+    ## Runner (Job will execute on fresh ubuntu VM
     runs-on: ubuntu-latest
+
+    ## Group of steps that run in sequence under ubuntu VM
+    ## uses means retrieve
+    ## Run means executr
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
+      - run: sudo chown -R $USER /usr/local/lib/node_modules
       - run: npm install -g bats
       - run: bats -v
