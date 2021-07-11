@@ -1,5 +1,5 @@
 name: Terraform Plan
-on: [push, pull_request]
+on: [push]
 defaults:
   run:
     shell: bash
