@@ -5,7 +5,7 @@ provider "google" {
 
 terraform {
   backend "gcs" {
-    bucket = "hd-srch-dev-rajpal-tf-state"
+    bucket = "test-rajpal-tf-state"
     prefix = "terraform/state"
   }
 }
